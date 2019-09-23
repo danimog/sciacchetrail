@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-xs navbar-light #fff">
+	<a class="navbar-brand" href="{{site.baseurl}}/">
+	<img src="{{site.baseurl}}/assets/images/logosciacchetrail_ctt_sportiva.png" width="286" height="100" class="d-inline-block align-top" alt="">
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	    <div class="navbar-nav ml-auto">
+			<ul class="navbar-nav ml-auto">
+			{% for item in site.data.nav %}
+				<li class="nav-item {% if page.url == item.link %}active{% endif %}">
+					<a class="nav-item nav-link {% if page.url == item.link %}active{% endif %} text-right" href="{{ site.baseurl }}{{ item.link }}">
+				      {{ item.name }}
+				  	</a>
+			    </li>
+			  {% endfor %}
+			</ul>
+		</div>
+	</div>
+</nav>
+<hr>

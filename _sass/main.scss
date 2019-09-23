@@ -1,0 +1,32 @@
+  
+h1{
+	color: #E44F0A; //colore arancione - sciacchetrail
+	font-family: 'Amatic SC', cursive;
+}
+
+a active, visited {
+	text-decoration: none;
+	color: lightblue;
+}
+
+.card-title{
+	color: #E44F0A; //colore arancione - sciacchetrail
+	font-family: 'Amatic SC', cursive;
+}
+
+.site-footer .love .icon {
+	font-size: 12px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+/* override btn primary - colore azzurro sciacchetrail*/
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #FFFFFF;
+    border-color: #E44F0A;
+    color: #128BCB
+}
