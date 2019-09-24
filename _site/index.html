@@ -11,7 +11,13 @@
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Roboto:400,700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/sciacchetrail/assets/css/styles.css">
-    
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+
     <title></title>
   </head>
   <body>
@@ -49,13 +55,13 @@
     </div> 
 
     <div class="container-fluid text-center">
-      <h1 class=" font-weight-bold">Sciacchetrail 2020</h1>
+      <h1 class="font-weight-bold">Sciacchetrail 2020</h1>
 <br>
 
 <img class="img-fluid" src="/sciacchetrail/assets/images/foto_home_04.png" style="max-height: 600px;">
 
 <div class="row" style="margin-top: -20px; margin-left: 10px; margin-right: 10px;">
-  <div class="col-sm-4">
+  <div class="col-md-4">
     <div class="card">
       <div class="card-body">
         <h2 class="card-title font-weight-bold">PERCORSO</h2>
@@ -64,7 +70,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
+  <div class="col-md-4">
     <div class="card">
       <div class="card-body">
         <h2 class="card-title font-weight-bold">INFO GARA</h2>
@@ -73,7 +79,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
+  <div class="col-md-4">
     <div class="card">
       <div class="card-body">
         <h2 class="card-title font-weight-bold">SCIACCHETRAIL 365</h2>
@@ -84,6 +90,97 @@
   </div>
 
 </div>
+
+<div class="container-fluid" style="background-color: #EFEFEF;">
+  <div class="container">
+<h1 class="font-weight-bold" style="margin-top: 30px;">Ultime notizie</h1>
+<div class="row">
+    
+      <div class="col-md-4" style="margin-bottom: 10px;">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title"><a href="/sciacchetrail/2019/09/20/primanotizia.html">Primanotizia</a></h2>
+            <p class="card-text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4" style="margin-bottom: 10px;">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title"><a href="/sciacchetrail/2019/09/19/secondanotizia.html">Secondanotizia</a></h2>
+            <p class="card-text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4" style="margin-bottom: 10px;">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title"><a href="/sciacchetrail/2019/09/18/terzanotizia.html">Terzanotizia</a></h2>
+            <p class="card-text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4" style="margin-bottom: 10px;">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title"><a href="/sciacchetrail/2019/09/17/quartanotizia.html">Quartanotizia</a></h2>
+            <p class="card-text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4" style="margin-bottom: 10px;">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title"><a href="/sciacchetrail/2019/09/16/quintanotizia.html">Quintanotizia</a></h2>
+            <p class="card-text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4" style="margin-bottom: 10px;">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title"><a href="/sciacchetrail/2019/09/15/sestanotizia.html">Sestanotizia</a></h2>
+            <p class="card-text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+</p>
+          </div>
+        </div>
+      </div>
+    
+</div>
+</div>
+
+</div>
+
+<div class="container" id="mapid" style="width: 1200px; height: 480px;"></div>
+<script>
+
+  var mymap = L.map('mapid').setView([44.1249, 9.7147], 12);
+
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox.streets'
+  }).addTo(mymap);
+
+</script>
     </div>
 
     <div class="container">
