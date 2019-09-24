@@ -187,7 +187,7 @@
       <footer>
         <ul class="info">
           <li>Distanza:&nbsp;<span class="distance"></span>&nbsp;km</li>
-          &mdash; <li>Dislivello:&nbsp;+<span class="elevation-gain"></span> metri</li>
+          &mdash; <li>Dislivello:&nbsp;+&nbsp;<span class="elevation-gain"></span> metri</li>
         </ul>
       </footer>
     </section>
@@ -219,8 +219,17 @@ function display_gpx(elt) {
     //  var gpx = 'https://www.sciacchetrail.com/wp-content/uploads/2019/02/Sciacchetrail_21022019.gpx'; // URL to your GPX file
       var gpx = '/sciacchetrail/assets/images/Sciacchetrail_21022019.gpx';
       new L.GPX(
-        gpx, {async: true}
-        ).on('loaded', function(e) {
+        gpx, {async: true,
+        	marker_options: {
+		    startIconUrl: '/sciacchetrail/assets/images/pin-icon-start.png',
+		  },
+		  polyline_options: {
+		    color: '#128BCB',
+		    opacity: 0.85,
+		    weight: 4,
+		    lineCap: 'round'
+		  }
+        }).on('loaded', function(e) {
           var gpx = e.target;
           map.fitBounds(gpx.getBounds());
           control.addOverlay(gpx, gpx.get_name());
