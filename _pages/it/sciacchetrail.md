@@ -1,5 +1,6 @@
 ---
 layout: default
+lang: it
 title: Sciacchetrail
 ---
 # Sciacchetrail

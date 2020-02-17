@@ -8,7 +8,7 @@
 
 	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 	    <div class="navbar-nav ml-auto">
-			<ul class="navbar-nav ml-auto">
+			<!--ul class="navbar-nav ml-auto">
 			{% for item in site.data.nav %}
 				<li class="nav-item {% if page.url == item.link %}active{% endif %}">
 					<a class="nav-item nav-link {% if page.url == item.link %}active{% endif %} text-right" href="{{ site.baseurl }}{{ item.link }}">
@@ -16,8 +16,23 @@
 				  	</a>
 			    </li>
 			  {% endfor %}
+			</ul-->
+
+			<ul>
+				{% for lang in site.data.nav %}
+			      <li><a href="{{ '/' | append: lang[0] | relative_url }}"
+			        class="u-padding-r-all"><span lang="{{ lang[0] }}">{{ lang[1].name }}</span></a></li>
+			      {% endfor %}
 			</ul>
+
+			{% assign pages=site.pages | where:"lang", page.lang %}
+	        {% for my_page in pages %}
+	          {% if my_page.title %}
+	          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+	          {% endif %}
+	        {% endfor %}
 		</div>
 	</div>
 </nav>
+
 <hr>

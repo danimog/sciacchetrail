@@ -1,5 +1,20 @@
-  
-- name: Home
-  link: /
-- name: Sciacchetrail
-  link: /sciacchetrail.html
+it:
+  code: ita
+  name: italiano
+  t:
+    home:
+      name: "Home"
+      url: /
+    sciacchetrail:
+      name: "Sciacchetrail"
+      url: /sciacchetrail.html
+en:
+  code: eng
+  name: english
+  t:
+    home:
+      name: "Home"
+      url: /
+    sciacchetrail:
+      name: "Sciacchetrail"
+      url: /sciacchetrail.html

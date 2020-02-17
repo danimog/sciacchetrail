@@ -1,4 +1,8 @@
-  
 baseurl: "/sciacchetrail"
-
 markdown: kramdown 
+
+collections:
+   pages:
+     output: true
+     permalink: /:path/
+     layout: default
