@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/sciacchetrail/assets/css/styles.css">
+
+    <!-- Leaflet plugin per caricare la mappa di openstreet map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+   
+   <!-- Leaflet GPX plugin per caricare la traccia sciacchetrail -->
+   <!--script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js"></script-->
+    <script src="https://rawgithub.com/mpetazzoni/leaflet-gpx/master/gpx.js"></script>
+
+    <title></title>
+  </head>
+  <body>
+    
+    <div class="container">
+      <nav class="navbar navbar-expand-xs navbar-light #fff">
+	<a class="navbar-brand" href="/sciacchetrail/">
+	<img src="/sciacchetrail/assets/images/logosciacchetrail_ctt_sportiva.png" width="286" height="100" class="d-inline-block align-top" alt="">
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	    <div class="navbar-nav ml-auto">
+			<!--ul class="navbar-nav ml-auto">
+			
+				<li class="nav-item ">
+					<a class="nav-item nav-link  text-right" href="/sciacchetrail">
+				      
+				  	</a>
+			    </li>
+			  
+				<li class="nav-item ">
+					<a class="nav-item nav-link  text-right" href="/sciacchetrail">
+				      
+				  	</a>
+			    </li>
+			  
+			</ul-->
+
+			<ul>
+				
+			      <li><a href="/sciacchetrail/it"
+			        class="u-padding-r-all"><span lang="it">italiano</span></a></li>
+			      
+			      <li><a href="/sciacchetrail/en"
+			        class="u-padding-r-all"><span lang="en">english</span></a></li>
+			      
+			</ul>
+
+			
+	        
+	          
+	          <a class="page-link" href="/sciacchetrail/en/">Home page - english</a>
+	          
+	        
+	          
+	          <a class="page-link" href="/sciacchetrail/it/">Home page</a>
+	          
+	        
+	          
+	          <a class="page-link" href="/sciacchetrail/it/sciacchetrail/">Sciacchetrail</a>
+	          
+	        
+		</div>
+	</div>
+</nav>
+
+<hr>
+    </div> 
+
+    <div class="container-fluid text-center">
+      <h1>ArTrail Cinque Terre: dallo shock emotivo all' arte</h1>
+<p>23 Feb 2018 - {"login"=>"autore", "email"=>"info@sciacchetrail.com", "display_name"=>"info", "first_name"=>"info", "last_name"=>""}</p>
+
+<p>[:it]<br />
+<blockquote>Il 24 e 25 Marzo, lo Sciacchetrail Outdoor &amp; Family Village a Monterosso, ospiterà la prima edizione di ArTrail. La mostra/concorso d'arte dedicata agli elementi primordiali delle Cinque Terre sarà allestista nella tensostruttura in Piazza Belvedere.</p></blockquote>
+<p>A stabilire il vincitore - in occasione della premiazione di domenica 25 marzo alle 11 e 30 in Piazza Belvedere - una giuria composta da autorevoli personalità del mondo del vino e dell'arte: <strong>Marzia Raggi</strong> (vignaiola),<strong> Alessandra Gattino</strong> (Scrittrice), <strong>Massimiliano Alì</strong> (architetto paesaggista), <strong>Mara Borzone</strong> (critica d’arte), <strong>Francesco Vaccarone</strong> (artista), <strong>Giacomo Cappellini</strong> (vignaiolo).</p>
+<p><em> </em><em>A</em>rTrail porterà a Monterosso oltre 20 artisti in una sorta di omaggio alla gloriosa  “Festa ai Pittori” di Manarola, promossa  intorno agli anni '60 da Dario Cappellini.</p>
+<p>Nel solco tracciato dalla storica manifestazione, al linguaggio universale dell’arte sarà affidato il compito di interpretare e dar voce alla complessità di un paesaggio fatto di natura, uomini e viticoltura. Un rapporto che oggi é in profonda crisi per le mutate condizioni socioeconomiche.</p>
+<p>Come allora il vino sarà il premio più ambito, espressione di un’opera di Land Art inconsapevole, creata da una collettività di vignaioli del passato e del presente.</p>
+<p><strong>Il Progetto ArTrail. Di Helene Barraud</strong></p>
+<p><span style="text-align: center;">Le Cinque Terre con i loro paesaggi unici hanno segnato l’immaginario di molti artisti. Lo shock emotivo di fronte ai paesi costruiti sulla roccia, le case torri ammassate le une alle altre, i rosoni sulle facciate delle chiese ed i muri a secco aggrappati alla costa a strapiombo, sono stati rappresentati a partire dal secondo Ottocento con l’epoca romantica.</span></p>
+<p style="text-align: center;">Erano paesaggi esotici e lontani dalle città, silenziosi ed isolati.<br />
+Visioni e sollecitazioni poetiche del paesaggio verticale hanno mosso la mano di molti artisti, da <em>Telemaco Signorini</em> a <em>Lino Marzulli</em> fino ad ispirare una parte della poetica dell’artista <em><strong>Francesco Vaccarone</strong>,</em> legato alle Cinque Terre da ricordi indelebili dell’infanzia.</p>
+<blockquote><p><em>Michelangelo Pistoletto,</em> stanziale a Corniglia dal 1967, risponde a <strong>Marco Ferrari</strong> nel suo libro “Mare Verticale” che lo incalza chiedendogli: <em>la creazione artistica ha un segreto in questo pezzo di terra e roccia arrampicata sul mare? </em>La libertà è fondamentale per l’ispirazione e qui se ne respira tanta, ci si sente più sinceri, più puri, più autentici certo, questa collettività favorisce l ‘impegno e la dimensione etica dell’artista, una dimensione che oggi sembra cancellata o quasi.</p></blockquote>
+<p>Ma la libertà non può essere sconfinata, deve avere delle regole morali. L’ estetica da sola non serve, può funzionare solo se coniugata con l’etica.</p>
+<p><b><i>Ora questi paesi vivono di folle di masse inconsapevoli e superficiali. Lo sfruttamento commerciale ne degrada il ruolo culturale e turistico.</i></b></p>
+<p>L’ ArTrail ha l’obiettivo di concentrare lo sguardo degli artisti sull’essenza di questo territorio.</p>
+<p style="text-align: center;"><b>Aria, Acqua, Terra e Fuoco: i 4 elementi tema della 1^ edizione</b></p>
+<p>Il tema Aria, Acqua, Terra e Fuoco segnerà l’anno zero della manifestazione con l’auspicio di far rinascere l’attenzione sul paesaggio, l’autenticità e la libertà d’espressione.</p>
+<blockquote><p><em>Dagli elementi primordiali ad un ecosistema rigenerato.</em> La terra dei vigneti, la terra sotto le scarpe dei runner, l’aria ed i venti che sferzano la costa, il fuoco del sole che brucia la roccia e la pelle dei vignaioli, l’acqua del mare che isola l’uomo dalla civiltà.</p></blockquote>
+<p>L’edizione Zero vuol promuovere il paesaggio, negarne il degrado, spingere alla consapevolezza e alla sensibilizzazione sui temi della sostenibilità e rispetto dell’ambiente.</p>
+<p>Un progetto che cercherà di coinvolgere il maggior numero di artisti e, attraverso le loro opere, proporre un nuovo sguardo sul territorio.</p>
+<p style="text-align: center;"><b>L’idea di ArTrail </b></p>
+<p>Nasce da un’idea di Helene Barraud, artista monterossina nata nel 1989, laureata all’Accademia delle Arti e Nuove Tecnologie di Roma, grafica e designer, si stabilisce a Busto Arsizio, dove apre il suo Atelier. La sua arte si concentra sull’essenza del suo territorio d’origine, case colorate - TINY HOUSES, ammassi di gozzi, acquerelli sofisticati che rapiscono i dettagli più intimi del suo paese.</p>
+<p>Tra i suoi lavori di grafica, nel 2014 crea le etichette dei vini dell’Azienda Agricola A Scià, nel 2016 scrive la Guida Infografica delle Cinque Terre e nel 2017 pubblica una raccolta di acquerelli e brevi poesie “Pensieri appesi e angoli nascosti delle Cinque Terre” e nel 2018 mette la firma su tutte le bottiglie della Cantina Sassarini.<br />
+Alcune delle sue tele si riconoscono nelle stanze dell’Affittacamere da Benedetta, altre nelle stanze dell’affittacamere “A CA’ DA VANIGLIA”, altre sono appese alle pareti della Cantina Sassarini.</p>
+<div class="page" title="Page 1">
+<div class="section">
+<div class="layoutArea">
+<div class="column">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+<p><a href="http://new.sciacchetrail.com/wp-content/uploads/2018/02/pieghevoleartrail.pdf">Pieghevole ArTrail</a>[:en]<br />
+<blockquote>At Sciacchetrail, a painting competition dedicated to the elements of the Cinque Terre. A landscape of inspiration for artists and sensitive souls, in life as in sport.</p>
+<div class="page" title="Page 2">
+<div class="section">
+<div class="layoutArea">
+<div class="column">
+<p>by Hélène Barraud</p>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<p style="text-align: center;"><strong>Cinque Terre: from emotional shock to art</strong></p>
+<p>The Cinque Terre, with their unique landscape, have sparked the imagination of innumerable artists. The emotional shock of the villages constructed on rock, the tower houses built one upon the other, the rosettes on the facades of churches and the dry stone walls clinging to the cliffs, have been represented in art since the late nineteenth century with the romantic era.<br />
+They were exotic landscapes far from the city, silent and isolated.<br />
+Visions and poetic solicitations of the vertical landscape have guided the hand of many artists, from <em>Telemaco Signorini </em>to<em> </em><em>Lino Marzulli</em> and inspired a part of the poetics of the artist <em>Francesco Vaccarone,</em> tied to the Cinque Terre by indelible memories from childhood.</p>
+<blockquote><p><em>Michelangelo Pistoletto,</em> settled in Corniglia from 1967, responds to <strong>Marco Ferrari</strong> in his book "Vertical Sea” and presses him by asking: <em>artistic creation has a secret in this piece of land and rock climbing from the sea? </em>Freedom is fundamental for inspiration and here you breathe it, one feels more sincere, more pure, and certainly more authentic, this collectivity favors the commitment and the ethical dimension of the artist, a dimension that today seems nearly absent.</p></blockquote>
+<p>But freedom cannot be boundless, it must have moral rules.  <em>Aesthetics alone is not useful, it functions only if  conjugated with ethics.  </em></p>
+<p><b><i>Now these villages live with oblivious and superficial masses.  Commercial exploitation degrades its cultural and touristic role. </i></b></p>
+<p>ArTrail has the objective of concentrating the attention of the artist on the essence of this territory.</p>
+<p style="text-align: center;"><b>Air, Water, Earth and Fire: the 4 elements and theme of the 1st edition</b></p>
+<p>The theme of Air, Water, Earth and Fire marks year zero of this event with the aspiration of regaining attention on the landscape, authenticity and freedom of expression.</p>
+<blockquote><p><em>From primordial elements to a regenerated ecosystem.</em>  The land of vineyards, the earth under the soles of runners, the air and winds that lash the coast, the fire of the sun that burns the rock and the skin of winemakers, the water of the sea that isolates man from civilization.</p></blockquote>
+<p>The edition Year Zero of ArTrail wants to promote a landscape, wants to negate degradation, push awareness and sensitization on the themes of sustainability and respect for the environment.</p>
+<p>A project that attempts to involve the greatest number of artists possible, and through their works, propose a new vision of the territory..</p>
+<p><em>Not just landscapes, but color, origins and protest.  </em>ArTrail will be a guest at Sciacchetrail 2018, scheduled from 23 to 25 March in Monterosso, with the ambition to be organized also in the coming years, in un sort of homage to the glorious  “Festa ai Pittori” (Painter's Festival) of Manarola promoted by Dario Capellini in the 1960's. In the footsteps of that historic event, the intention is to entrust the universal language of art with the task of interpreting and giving voice to the complexity of a landscape made by nature, man, and winemaking, which today is in grave crisis due to changing socioeconimic conditions.</p>
+<p>As then, wine will be the coveted prize, an expression of an unconscious work of Land Art, created by a community of winemakers past and present.</p>
+<p style="text-align: center;"><b>The idea of ArTrail </b></p>
+<p>The idea comes from Helene Barraud, artist and designer from Monterosso born in 1989, graduate of the Academy of Arts and New Technologies of Rome.  She currently resides in Busto Arsizio, where she has opened her Atelier.  Her art focuses on the essence of her hometown - TINY HOUSES, clusters of fishing boats, sophisticated watercolors that capture the most intimate details of her village.</p>
+<p>Among her graphic design works, in 2014 she created the label for the wines of Azienda Agricola A Scià, in 2016 she wrote the "Guida Infografica delle Cinque Terre", in 2017 she published a collection of watercolors and short poems "Hanging thoughts and hidden corners of the Cinque Terre" and in 2018 her designs will be on all of the wines of Cantina Sassarini.<br />
+Some of her paintings can be seen in the rooms of Affittacamere da Benedetta, others at affittacamere “A CA’ DA VANIGLIA”, and others are hanging on the walls of Cantina Sassarini.</p>
+<p style="text-align: center;"><b>The Exceptional Jury</b></p>
+<div class="page" title="Page 1">
+<div class="section">
+<div class="layoutArea">
+<div class="column">
+<p><strong>Marzia Raggi</strong> (winemaker),<strong> Alessandra Gattino</strong> (writer), <strong>Massimiliano Alì</strong> (landscape architect), <strong>Mara Borzone</strong> (art critic), <strong>Francesco Vaccarone</strong> (artist), <strong>Giacomo Cappellini</strong> (winemaker).</p>
+</div>
+</div>
+</div>
+</div>
+<p><a href="http://new.sciacchetrail.com/wp-content/uploads/2018/02/pieghevoleartrail.pdf">ArTrail Brochure</a>[:]</p>
+
+    </div>
+
+    <div class="container">
+      <hr>
+<p class="text-center">Made with <ion-icon name="heart" style="color: red;"></ion-icon> da <a href="https://danimog.github.io" target="_blank">Daniele Moggia</a>
+</p>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+  </body>
+</html>
