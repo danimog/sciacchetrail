@@ -27,57 +27,38 @@
   </head>
   <body>
     
-    <div class="container">
-      <nav class="navbar navbar-expand-xs navbar-light #fff">
-	<a class="navbar-brand" href="/sciacchetrail/">
-	<img src="/sciacchetrail/assets/images/logosciacchetrail_ctt_sportiva.png" width="286" height="100" class="d-inline-block align-top" alt="">
-	</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-	<span class="navbar-toggler-icon"></span>
-	</button>
-
-	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-	    <div class="navbar-nav ml-auto">
-			<!--ul class="navbar-nav ml-auto">
-			
-				<li class="nav-item ">
-					<a class="nav-item nav-link  text-right" href="/sciacchetrail">
-				      
-				  	</a>
-			    </li>
-			  
-				<li class="nav-item ">
-					<a class="nav-item nav-link  text-right" href="/sciacchetrail">
-				      
-				  	</a>
-			    </li>
-			  
-			</ul-->
-
-			<ul>
-				
-			      <li><a href="/sciacchetrail/it"
-			        class="u-padding-r-all"><span lang="it">italiano</span></a></li>
-			      
-			      <li><a href="/sciacchetrail/en"
-			        class="u-padding-r-all"><span lang="en">english</span></a></li>
-			      
-			</ul>
-
-			
-	        
-	          
-	          <a class="page-link" href="/sciacchetrail/it/">Home page</a>
-	          
-	        
+    <div class="container-fluid">
+      <!--nav class="navbar navbar-expand-xs navbar-light #fff">
+	<div class="container row">
+		<div class="col-md-8 cols-sm-12"><a class="navbar-brand" href="#">
+			<img src="/sciacchetrail/assets/images/logo.png" width="482" height="150" class="d-inline-block align-top img-fluid" alt="">
+		</a></div>
+		<div class="logo col-md-4 col-sm-12">
+			<div><img src="/sciacchetrail/assets/images/CTT.jpg" class="img-fluid"></div>
+			<div><img src="/sciacchetrail/assets/images/logo_lasportiva.png" class="img-fluid"></div>
+			<div><img src="/sciacchetrail/assets/images/ASDPolisportivaNUOVO.jpg" class="img-fluid"></div>
 		</div>
 	</div>
-</nav>
+</nav-->
+
+<div class="text-center m-3">
+	<ul class="list-inline">
+		<li class="list-inline-item"><button class="btn btn-outline-info"><h1><a href="#manifesto">MANIFESTO</a></h1></button></li>
+		<li class="list-inline-item"><button class="btn btn-outline-info"><h1><a href="#viticoltori">VITICOLTORI</a></h1></button></li>
+		<li class="list-inline-item"><button class="btn btn-outline-info"><h1><a href="#dormire">OSPITALITA'</a></h1></button></li>
+		<li class="list-inline-item"><button class="btn btn-outline-info"><h1><a href="#virtual">VIRTUAL</a></h1></button></li>
+	</ul>
+</div>
+
+<div class="container-fluid">
+  <img class="img-fluid w-100" src="/sciacchetrail/assets/images/banner_img.jpg">
+</div>
+
 
 <hr>
     </div> 
 
-    <div class="container-fluid text-center">
+    <div class="container-fluid">
       <h1>Secondanotizia</h1>
 <p>19 Sep 2019 - sciacchetrail team</p>
 
@@ -100,7 +81,60 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <!-- <script type="text/javascript" src="/sciacchetrail/assets/js/instafeed.min.js"></script> -->
+
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <script>
+      var mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+
+<!-- https://www.sowecms.com/demos/InstagramFeed/ -->
+    <script src="/sciacchetrail/assets/js/InstagramFeed.min.js"></script>
+<script>
+    (function(){
+        new InstagramFeed({
+            'username': 'sciacchetrail',
+            'container': document.getElementById("instagram-feed1"),
+            'display_profile': true,
+            'display_biography': true,
+            'display_gallery': true,
+            'callback': null,
+            'styling': true,
+            'items': 8,
+            'items_per_row': 4,
+            'margin': 1 
+        });
+    })();
+</script>
+
+<!-- <script>
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'sciacchetrail',
+        accessToken: '1496233471.M2E4MWE5Zg==.NmJkMzI5ZDg0ZjIx.NDMyN2IzOGFiNDdmOTJjMWIyMTg=',
+        template: '<a href=""><img src="" /></a>'
+    });
+    feed.run();
+</script> -->
 
   </body>
 </html>

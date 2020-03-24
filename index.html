@@ -1,51 +1,57 @@
 ---
-layout: home2
+layout: default
 lang: it
-title: Home page
+title: Virtual 
 permalink: /
 ---
-<h1 class="font-weight-bold">{{ "Sciacchetrail 2020"}}</h1>
-<br>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<img class="img-fluid" src="{{site.baseurl}}/assets/images/foto_home_04.png" style="max-height: 600px;">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<div class="row" style="margin-top: -20px; margin-left: 10px; margin-right: 10px;">
-  <div class="col-md-4">
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title font-weight-bold">PERCORSO</h2>
-        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-        <a href="#" class="btn btn-primary">Link 1</a>
-      </div>
+    <title>Virtual Sciacchetrail 2020</title>
+  </head>
+  <body>
+
+    <button class="btn btn-outline-warning" onclick="topFunction()" id="myBtn" title="Go to top">&uarr;</button>
+
+
+    <div class="container">
+      <h1 id="manifesto" class="text-center">VIRTUAL SCIACCHETRAIL: IL MANIFESTO</h1>
+      <span class="text-justify" style="font-size: 125%;">Sciacchetrail quest’anno non ha potuto aver luogo. Dai centinaia di messaggi di affetto e vicinanza che sono arrivati all’organizzazione dopo l’annuncio dell’inesorabile rinvio al 2021, e dalla straordinaria resilienza che abbiamo imparato dal trail running, abbiamo deciso di ribaltare il punto di vista su questa drammatica emergenza sanitaria che sta coinvolgendo tutto il mondo. E come?
+      <BR />
+      I valori che stanno dietro a Sciacchetrail sono universali e sono più che mai utili, oggi, in un mondo che sembra aver smarrito il senso delle cose: l’ascolto della natura, dei suoi ritmi. La ricerca dell’unicità di paesaggi, comunità, sapori. L’irripetibilità di certi luoghi, di certi scorci, di certi sentieri. La possibilità di immergersi in un ambiente in salute, il vero lusso della nostra epoca. Un patrimonio universale che attraversa lo spazio ed il tempo, nell’attesa che tutto torni alla normalità. Anzi meglio di prima. 
+      <BR />
+      Ebbene, da questo magma di bellezza, ricordi, voglia di sfidarsi, di condividere, di lottare perché il bene che ci permette tutta questa pienezza, cioè il territorio, sia in salute, è nata l’idea di organizzare uno Sciacchetrail virtuale. 
+      Esattamente il 28 marzo, data in cui avrebbe dovuto svolgersi l’edizione del 2020. Sarà una call to action per i runner, gli organizzatori, i volontari, attraverso i profili Instagram e facebook di Sciacchetrail che coinvolgerà tutte le anime che in questi 6 anni hanno reso possibile questo incredibile ultratrail.
+      <BR />
+      Sciacchetrail per noi è sempre stato una vendemmia di sogni e di emozioni, la sintesi di una laboriosità silenziosa e caparbia, dell’ impegno di centinaia di volontari, della disponibilità di sponsor affini per valori e della generosità di vignaioli e operatori del territorio che hanno investito tempo e risorse.
+      <BR />
+      Abbiamo sempre cercato di fare il meglio e vorremmo che il 28 marzo, un pò di questo calore e questa autenticità, esplodesse, si propagasse e gettasse le basi per un manifesto dell’outdoor come futuro auspicabile per le Cinque Terre, come per altri luoghi fragili e preziosi.
+      </span>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title font-weight-bold">INFO GARA</h2>
-        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-        <a href="#" class="btn btn-primary">Link 2</a>
-      </div>
+
+<hr class="m-3">
+    <div class="container" id="viticoltori">
+      {% include viticoltori.html %}
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title font-weight-bold">SCIACCHETRAIL 365</h2>
-        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-        <a href="#" class="btn btn-primary">Link 3</a>
-      </div>
+
+<hr class="m-3">
+    <div class="container" id="dormire">
+      {% include dormire.html %}
     </div>
-  </div>
 
-</div>
+<hr class="m-3">
+    <div class="container" id="virtual">
+      {% include virtual.html %}
+    </div>
 
-<div class="container-fluid" style="background-color: #EFEFEF;">
-  {% include notizie.html %}
-</div>
 
-<div class="container-fluid">
-  {% include mappa_percorso.html %}
-</div>
-
+  </body>
+</html>
 

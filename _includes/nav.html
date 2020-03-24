@@ -1,38 +1,28 @@
-<nav class="navbar navbar-expand-xs navbar-light #fff">
-	<a class="navbar-brand" href="{{site.baseurl}}/">
-	<img src="{{site.baseurl}}/assets/images/logosciacchetrail_ctt_sportiva.png" width="286" height="100" class="d-inline-block align-top" alt="">
-	</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-	<span class="navbar-toggler-icon"></span>
-	</button>
-
-	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-	    <div class="navbar-nav ml-auto">
-			<!--ul class="navbar-nav ml-auto">
-			{% for item in site.data.nav %}
-				<li class="nav-item {% if page.url == item.link %}active{% endif %}">
-					<a class="nav-item nav-link {% if page.url == item.link %}active{% endif %} text-right" href="{{ site.baseurl }}{{ item.link }}">
-				      {{ item.name }}
-				  	</a>
-			    </li>
-			  {% endfor %}
-			</ul-->
-
-			<ul>
-				{% for lang in site.data.nav %}
-			      <li><a href="{{ '/' | append: lang[0] | relative_url }}"
-			        class="u-padding-r-all"><span lang="{{ lang[0] }}">{{ lang[1].name }}</span></a></li>
-			      {% endfor %}
-			</ul>
-
-			{% assign pages=site.pages | where:"lang", page.lang %}
-	        {% for my_page in pages %}
-	          {% if my_page.title %}
-	          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-	          {% endif %}
-	        {% endfor %}
+<!--nav class="navbar navbar-expand-xs navbar-light #fff">
+	<div class="container row">
+		<div class="col-md-8 cols-sm-12"><a class="navbar-brand" href="#">
+			<img src="{{site.baseurl}}/assets/images/logo.png" width="482" height="150" class="d-inline-block align-top img-fluid" alt="">
+		</a></div>
+		<div class="logo col-md-4 col-sm-12">
+			<div><img src="{{site.baseurl}}/assets/images/CTT.jpg" class="img-fluid"></div>
+			<div><img src="{{site.baseurl}}/assets/images/logo_lasportiva.png" class="img-fluid"></div>
+			<div><img src="{{site.baseurl}}/assets/images/ASDPolisportivaNUOVO.jpg" class="img-fluid"></div>
 		</div>
 	</div>
-</nav>
+</nav-->
+
+<div class="text-center m-3">
+	<ul class="list-inline">
+		<li class="list-inline-item"><button class="btn btn-outline-info"><h1><a href="#manifesto">MANIFESTO</a></h1></button></li>
+		<li class="list-inline-item"><button class="btn btn-outline-info"><h1><a href="#viticoltori">VITICOLTORI</a></h1></button></li>
+		<li class="list-inline-item"><button class="btn btn-outline-info"><h1><a href="#dormire">OSPITALITA'</a></h1></button></li>
+		<li class="list-inline-item"><button class="btn btn-outline-info"><h1><a href="#virtual">VIRTUAL</a></h1></button></li>
+	</ul>
+</div>
+
+<div class="container-fluid">
+  <img class="img-fluid w-100" src="{{site.baseurl}}/assets/images/banner_img.jpg">
+</div>
+
 
 <hr>

@@ -27,11 +27,11 @@
   </head>
   <body>
     
-    <div class="container">
+    <div class="container-fluid">
       {% include nav.html %}
     </div> 
 
-    <div class="container-fluid text-center">
+    <div class="container-fluid">
       {{content}}
     </div>
 
@@ -46,7 +46,60 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <!-- <script type="text/javascript" src="{{site.baseurl}}/assets/js/instafeed.min.js"></script> -->
+
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <script>
+      var mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+
+<!-- https://www.sowecms.com/demos/InstagramFeed/ -->
+    <script src="{{site.baseurl}}/assets/js/InstagramFeed.min.js"></script>
+<script>
+    (function(){
+        new InstagramFeed({
+            'username': 'sciacchetrail',
+            'container': document.getElementById("instagram-feed1"),
+            'display_profile': true,
+            'display_biography': true,
+            'display_gallery': true,
+            'callback': null,
+            'styling': true,
+            'items': 8,
+            'items_per_row': 4,
+            'margin': 1 
+        });
+    })();
+</script>
+
+<!-- <script>
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'sciacchetrail',
+        accessToken: '1496233471.M2E4MWE5Zg==.NmJkMzI5ZDg0ZjIx.NDMyN2IzOGFiNDdmOTJjMWIyMTg=',
+        template: '<a href="{{link}}"><img src="{{image}}" /></a>'
+    });
+    feed.run();
+</script> -->
 
   </body>
 </html>
