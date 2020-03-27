@@ -448,21 +448,11 @@ TUTORIAL delle famose Lasagne al Pesto made in Sciacchetrail con Tarter Chef, in
 
 		<div id="instagram-feed1" class="col-lg-6 col-md-12">
 		</div>
-
+		<a href="https://www.instragram.com/sciacchetrail" target="_blank">SEGUICI SU INSTAGRAM!</a>
 	</div>
 
-<!-- 
-token accesso: EAAD9laf0k4cBAKwBSWjNfW49w177TRQbynHht8Y1qjaQx9wvZCqltZBb6O14UYctWQfYVtsOJZCSgvkNZAm5VIW8sDbZBzfpnPYJ6IQeAcvwWZCRnlcci6nAQEfx4KCZAkgmZBf1qxl28plmuZAsU2attpqrdGSpy1Sk3g6CwIhcD3XlmowMUfW3VJMuatUVKR2CHWWcLHbJb3gZDZD 
-
-id: 1496233471
-
-1496233471
-
-1496233471.M2E4MWE5Zg==.NmJkMzI5ZDg0ZjIx.NDMyN2IzOGFiNDdmOTJjMWIyMTg=
 
 
-
--->
     </div>
 
 
@@ -477,7 +467,8 @@ id: 1496233471
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
@@ -507,7 +498,7 @@ id: 1496233471
     </script>
 
 
-<!-- https://www.sowecms.com/demos/InstagramFeed/ -->
+<!-- https://www.sowecms.com/demos/InstagramFeed/ 
     <script src="/assets/js/InstagramFeed.min.js"></script>
 <script>
     (function(){
@@ -525,16 +516,32 @@ id: 1496233471
         });
     })();
 </script>
+-->
+<script>
+  
+  $(document).ready(function() {
+        $.ajax({
+            url: 'https://graph.instagram.com/me/media?fields=id,media_url&access_token=IGQVJVbllYU2VYWmkzbXdRekpqMWNLU0VEajR0Nk5qYXFiYm1HaG5HcjZAObjhkSDJ3RDg5bTU5ZAlAwMkJPTWhmS0trMHlEeFdvbEpIT05idk5SSGEweUlRQVk5bm9QT0E4RHpMdkZAB',
+            type: 'GET',
+            dataType: 'json',
+            contentType: "application/json",
+            
+            success: function(data){
+                  n = data.data.length;
+                  for (i = 0; i < n; i++) {
+                    console.log(data.data[i].media_url);
 
-<!-- <script>
-    var feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'sciacchetrail',
-        accessToken: '1496233471.M2E4MWE5Zg==.NmJkMzI5ZDg0ZjIx.NDMyN2IzOGFiNDdmOTJjMWIyMTg=',
-        template: '<a href=""><img src="" /></a>'
+                    let img = $('<img />', { 
+                      class: 'my-img',
+                      src: data.data[i].media_url
+                    });
+                    img.appendTo($('#instagram-feed1'));
+
+                  }
+            }
+            
+        });
     });
-    feed.run();
-</script> -->
-
+</script>
   </body>
 </html>

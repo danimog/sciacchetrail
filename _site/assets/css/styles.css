@@ -71,6 +71,11 @@ a:active, a:visited, a:link, a:hover {
 #myBtn:hover {
   /*   background-color: #555; */ }
 
+.my-img {
+  padding: .5rem;
+  max-width: 250px;
+  max-height: 250px; }
+
 #mapid {
   height: 480px; }
 
